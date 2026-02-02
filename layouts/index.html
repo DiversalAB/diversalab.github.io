@@ -1,0 +1,52 @@
+{{ define "main" }}
+<!-- Navigation -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a class="nav-brand" href="#page-top">Diversal</a>
+        <a class="nav-link" href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<header id="page-top">
+    <div class="header-content">
+        <div class="header-content-inner">
+            {{ with .Site.Params.logo }}
+            <img src="{{ . | relURL }}" alt="{{ $.Site.Title }}" class="logo">
+            {{ end }}
+            <hr class="light">
+            <p class="tagline">{{ .Site.Params.tagline }}</p>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            {{ with .Site.Params.contact }}
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>{{ .phone }}</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="mailto:{{ .email }}">{{ .email }}</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <p><a href="{{ .linkedin }}" target="_blank" rel="noopener">{{ .linkedinHandle }}</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-building"></i>
+                <p>ORG: {{ .orgNumber }}</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-file-invoice"></i>
+                <p>VAT: {{ .vatNumber }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

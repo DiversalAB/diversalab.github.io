@@ -1,0 +1,29 @@
+baseURL = "https://www.diversal.se/"
+languageCode = "en-us"
+title = "Diversal Consulting"
+
+[params]
+  description = "DevOps, Continuous Delivery, Kubernetes, Docker"
+  tagline = "DevOps, CD"
+  logo = "img/diversallogo_white.png"
+  accentColor = "#f05f40"
+
+  [params.contact]
+    phone = "+46709450857"
+    email = "info@diversal.se"
+    linkedin = "https://www.linkedin.com/company/diversalab/"
+    linkedinHandle = "diversalab"
+    orgNumber = "559069-7602"
+    vatNumber = "SE559069760201"
+
+[build]
+  [build.buildStats]
+    enable = true
+
+[minify]
+  minifyOutput = true
+
+# Disable unused features
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[taxonomies]
